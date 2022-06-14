@@ -1,7 +1,3 @@
-
-
-
-
 @charset "UTF-8";
 
 /***********************************
@@ -26,7 +22,6 @@ body {
     background: #181828;
     font-size: 14px;
     line-height: 1;
-    color: rgb(255, 255, 255);
 }
 
 label {
@@ -563,24 +558,22 @@ button {
 
 @media (max-width: 750px) {
 
-    body,
-    html,
-    {
-    max-height: 100vh;
-}
+    body, html {
+        max-height: 100vh;
+    }
 
-.error__content {
-    position: static;
-    margin: 0 auto;
-    transform: none;
-    padding-top: 300px;
-}
+    .error__content {
+        position: static;
+        margin: 0 auto;
+        transform: none;
+        padding-top: 300px;
+    }
 
-.error {
-    padding-top: 0;
-    padding-bottom: 100px;
-    height: 100vh;
-}
+    .error {
+        padding-top: 0;
+        padding-bottom: 100px;
+        height: 100vh;
+    }
 }
 
 @media (max-width: 650px) {
@@ -606,7 +599,6 @@ button {
 }
 
 @media (max-width: 480px) {
-
     .message__title {
         font-size: 30px;
     }

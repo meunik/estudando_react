@@ -3,7 +3,6 @@ import './Page404.css';
 export function Page404() {
     return (<>
         <main>
-            <h1>Resultado</h1>
             <header className="top-header">
             </header>
 
