@@ -1,5 +1,5 @@
 export function Form() {
     return (<>
-        <h1>Componente Form</h1>
+        <h1>Form</h1>
     </>)
 }

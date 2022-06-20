@@ -1,6 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { CaretDown } from "phosphor-react";
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 interface DropdownContentProps {
     dropdownContent: Object;
@@ -42,14 +43,14 @@ export function Dropdown({ dropdownContent }: DropdownContentProps) {
                                     </Transition>
                                 </Menu>
                             ) : (
-                                <a
+                                <Link
                                     key={key}
-                                    href={value.href}
+                                    to={value.href}
                                     className={`${active ? 'hover:bg-davita-black-2 bg-davita-black-2' : 'hover:bg-davita-black-2'} flex items-center p-2 text-sm focus:outline-none focus:bg-davita-black-2 gap-2 rounded-md`}
                                 >
                                     {value.icon}
                                     {value.title}
-                                </a>
+                                </Link>
                             ) }
                         </>)}
                     </Menu.Item>

@@ -1,4 +1,5 @@
 import { Menu } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 interface SubDropdownContentProps {
     subDropdownContent: Object;
@@ -11,14 +12,14 @@ export function SubDropdown({ subDropdownContent }: SubDropdownContentProps) {
                 return (
                     <Menu.Item>
                         {({ active }) => (
-                            <a
+                            <Link
                                 key={key}
-                                href={value.href}
+                                to={value.href}
                                 className={`${active ? 'hover:bg-davita-black-2 bg-davita-black-2' : 'hover:bg-davita-black-2'} p-2 text-sm focus:outline-none focus:bg-davita-black-2 gap-2 rounded-md`}
                             >
                                 {value.icon}
                                 {value.title}
-                            </a>
+                            </Link>
                         )}
                     </Menu.Item>
                 )

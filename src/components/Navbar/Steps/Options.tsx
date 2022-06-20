@@ -1,14 +1,15 @@
 import { Menu, Transition } from "@headlessui/react";
 import { CaretDown } from "phosphor-react";
-import { optionsType } from "..";
 import { Dropdown } from "./Dropdown";
 import { Fragment } from 'react'
+import { Link } from "react-router-dom";
+import { routesType } from "../../../AppRoutes/Configs";
 
 export function Options() {
     return (
         <div className="w-full h-full flex justify-end">
             {
-                Object.entries(optionsType).map(([key, value]) => {
+                Object.entries(routesType).map(([key, value]) => {
                     return (<>
                         { (value.dropdown) ? (
                             <Menu as="div" className="flex flex-col items-end text-left h-full">
@@ -34,14 +35,14 @@ export function Options() {
                                 </Transition>
                             </Menu>
                         ) : (
-                            <a
+                            <Link
                                 key={key}
-                                href={value.href}
+                                to={value.href}
                                 className="relative text-left h-full px-4 py-2 flex items-center hover:bg-davita-black-1 focus:outline-none focus:bg-davita-black-1 gap-2"
                             >
                                 {value.icon}
                                 {value.title}
-                            </a>
+                            </Link>
                         ) }  
                     </>)
                 })

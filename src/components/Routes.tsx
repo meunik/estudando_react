@@ -1,7 +1,7 @@
 import { Page404 } from "./Error/Page404";
-import { Form } from "./Mains/Form";
-import { AbsenteismoTotal } from "./Mains/Relatorios/AbsenteismoTotal";
-import { Resultado } from "./Mains/Resultado";
+import { AbsenteismoTotal } from "../pages/Relatorios/AbsenteismoTotal";
+import { Form } from "../pages/Form";
+import { Resultado } from "../pages/Resultado";
 
 export function Routes() {
     const url = window.location.pathname
