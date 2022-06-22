@@ -30,7 +30,7 @@ import { Sair } from "../pages/Sair";
 export const routesType = {
     FORM: {
         title: 'Form',
-        componet: <Form />,
+        component: <Form />,
         icon: <ClipboardText className="w-4 h-4" />,
         href: '/form',
         css: '',
@@ -39,7 +39,7 @@ export const routesType = {
     },
     RESULTADO: {
         title: 'Resultado',
-        componet: <Resultado />,
+        component: <Resultado />,
         icon: <ChartBar className="w-4 h-4" />,
         href: '/resultado',
         css: '',
@@ -48,7 +48,7 @@ export const routesType = {
     },
     OPTIONS: {
         title: '',
-        componet: null,
+        component: null,
         icon: <List className="w-4 h-4" />,
         href: '',
         css: '',
@@ -56,50 +56,50 @@ export const routesType = {
         dropdownContent: {
             RELATORI0S: {
                 title: 'Relatórios',
-                componet: null,
+                component: null,
                 icon: <ChartPie className="w-4 h-4" />,
                 href: '/',
                 dropdown: true,
                 dropdownContent: {
                     RELATIORIOS_DROPDOWN_CONTENT_0: {
                         title: 'Absenteismo Total',
-                        componet: <AbsenteismoTotal />,
+                        component: <AbsenteismoTotal />,
                         icon: <ChartPie className="w-4 h-4" />,
                         href: '/relatorios/absenteismo-total',
                     },
                     RELATIORIOS_DROPDOWN_CONTENT_1: {
                         title: 'Indicadores de Absenteísmo por dia e por departamento',
-                        componet: <AbsenteismoDepartamento />,
+                        component: <AbsenteismoDepartamento />,
                         icon: <ChartPie className="w-4 h-4" />,
                         href: '/relatorios/absenteismo-departamento',
                     },
                     RELATIORIOS_DROPDOWN_CONTENT_2: {
                         title: 'Indicadores de absenteísmo por dia e por unidade',
-                        componet: <AbsenteismoUnidade />,
+                        component: <AbsenteismoUnidade />,
                         icon: <ChartPie className="w-4 h-4" />,
                         href: '/relatorios/absenteismo-unidade',
                     },
                     RELATIORIOS_DROPDOWN_CONTENT_3: {
                         title: 'Tabela de afastados',
-                        componet: <DiasAfastados />,
+                        component: <DiasAfastados />,
                         icon: <ChartPie className="w-4 h-4" />,
                         href: '/relatorios/dias-afastamento',
                     },
                     RELATIORIOS_DROPDOWN_CONTENT_4: {
                         title: 'Vacinas',
-                        componet: <Vacinas />,
+                        component: <Vacinas />,
                         icon: <ChartPie className="w-4 h-4" />,
                         href: '/relatorios/vacinas',
                     },
                     RELATIORIOS_DROPDOWN_CONTENT_5: {
                         title: 'Atestados',
-                        componet: <RelatoriosAtestados />,
+                        component: <RelatoriosAtestados />,
                         icon: <ChartPie className="w-4 h-4" />,
                         href: '/relatorios/atestados',
                     },
                     RELATIORIOS_DROPDOWN_CONTENT_6: {
                         title: 'Afastados INSS',
-                        componet: <RelatoriosInss />,
+                        component: <RelatoriosInss />,
                         icon: <ChartPie className="w-4 h-4" />,
                         href: '/relatorios/inss',
                     },
@@ -107,38 +107,38 @@ export const routesType = {
             },
             GRAFICOS: {
                 title: 'Gráficos',
-                componet: null,
+                component: null,
                 icon: <ChartLineUp className="w-4 h-4" />,
                 href: '/',
                 dropdown: true,
                 dropdownContent: {
                     GRAFICOS_DROPDOWN_CONTENT_0: {
                         title: 'Atestados',
-                        componet: <GraficosAtestados />,
+                        component: <GraficosAtestados />,
                         icon: <ChartLineUp className="w-4 h-4" />,
                         href: '/graficos/atestados',
                     },
                     GRAFICOS_DROPDOWN_CONTENT_1: {
                         title: 'Covid',
-                        componet: <Covid />,
+                        component: <Covid />,
                         icon: <ChartLineUp className="w-4 h-4" />,
                         href: '/graficos/covid',
                     },
                     GRAFICOS_DROPDOWN_CONTENT_2: {
                         title: 'Função',
-                        componet: <Funcao />,
+                        component: <Funcao />,
                         icon: <ChartLineUp className="w-4 h-4" />,
                         href: '/graficos/funcao',
                     },
                     GRAFICOS_DROPDOWN_CONTENT_3: {
                         title: 'CID',
-                        componet: <Cid />,
+                        component: <Cid />,
                         icon: <ChartLineUp className="w-4 h-4" />,
                         href: '/graficos/cid',
                     },
                     GRAFICOS_DROPDOWN_CONTENT_4: {
                         title: 'Afastados Pelo INSS',
-                        componet: <GraficosInss />,
+                        component: <GraficosInss />,
                         icon: <ChartLineUp className="w-4 h-4" />,
                         href: '/graficos/inss',
                     },
@@ -146,26 +146,26 @@ export const routesType = {
             },
             TREINAMENTO: {
                 title: 'Treinamento',
-                componet: null,
+                component: null,
                 icon: <User className="w-4 h-4" />,
                 href: '/',
                 dropdown: true,
                 dropdownContent: {
                     TREINAMENTO_DROPDOWN_CONTENT_0: {
                         title: 'Cadastro Treinamento',
-                        componet: <CadastroTreinamento />,
+                        component: <CadastroTreinamento />,
                         icon: <User className="w-4 h-4" />,
                         href: '/treinamento/cadastro',
                     },
                     TREINAMENTO_DROPDOWN_CONTENT_1: {
                         title: 'Treninamento',
-                        componet: <Treninamento />,
+                        component: <Treninamento />,
                         icon: <User className="w-4 h-4" />,
                         href: '/treinamento',
                     },
                     TREINAMENTO_DROPDOWN_CONTENT_2: {
                         title: 'Relatório Treinamento',
-                        componet: <RelatorioTreinamento />,
+                        component: <RelatorioTreinamento />,
                         icon: <User className="w-4 h-4" />,
                         href: '/treinamento/relatorio',
                     },
@@ -175,7 +175,7 @@ export const routesType = {
     },
     USER: {
         title: '',
-        componet: null,
+        component: null,
         icon: <UserCircle className="w-8 h-8" />,
         href: '',
         css: 'mr-2',
@@ -183,7 +183,7 @@ export const routesType = {
         dropdownContent: {
             CADASTRO: {
                 title: 'Cadastros',
-                componet: null,
+                component: null,
                 icon: <Pencil className="w-4 h-4" />,
                 href: '/',
                 css: '',
@@ -191,19 +191,19 @@ export const routesType = {
                 dropdownContent: {
                     CADASTRO_DROPDOWN_CONTENT_0: {
                         title: 'Cadastro Usuário',
-                        componet: <CadastroUsuario />,
+                        component: <CadastroUsuario />,
                         icon: <Pencil className="w-4 h-4" />,
                         href: '/users',
                     },
                     CADASTRO_DROPDOWN_CONTENT_1: {
                         title: 'Cadastro Colega',
-                        componet: <CadastroColega />,
+                        component: <CadastroColega />,
                         icon: <Pencil className="w-4 h-4" />,
                         href: '/colegas',
                     },
                     CADASTRO_DROPDOWN_CONTENT_2: {
                         title: 'Importar Colegas',
-                        componet: <ImportarColegas />,
+                        component: <ImportarColegas />,
                         icon: <Pencil className="w-4 h-4" />,
                         href: '/colegas/importar',
                     },
@@ -211,7 +211,7 @@ export const routesType = {
             },
             ALTERAR_SENHA: {
                 title: 'Alterar Senha',
-                componet: <AlterarSenha />,
+                component: <AlterarSenha />,
                 icon: <Lock className="w-4 h-4" />,
                 href: '/password',
                 dropdown: false,
@@ -219,7 +219,7 @@ export const routesType = {
             },
             SAIR: {
                 title: 'Sair',
-                componet: <Sair />,
+                component: <Sair />,
                 icon: <SignOut className="w-4 h-4" />,
                 href: '/logout',
                 dropdown: false,
@@ -227,4 +227,24 @@ export const routesType = {
             },
         },
     },
+};
+
+export type RoutesType = typeof routesType;
+
+export type RoutesInterface = {
+    title: string,
+    component: JSX.Element|null,
+    icon: JSX.Element|null,
+    href: string,
+    css: string,
+    dropdown: boolean,
+    dropdownContent: {
+        title: string,
+        component: JSX.Element|null,
+        icon: JSX.Element|null,
+        href: string,
+        css: string,
+        dropdown: boolean,
+        dropdownContent: {},
+    }[]|{},
 };

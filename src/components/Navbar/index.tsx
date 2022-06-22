@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { routesType } from "../../AppRoutes/Configs";
 import { Options } from './Steps/Options';
 
 export function Navbar() {
@@ -15,7 +16,22 @@ export function Navbar() {
                 />
             </Link>
 
-            <Options />
+            <div className="w-full h-full flex justify-end">
+                {Object.entries(routesType).map(([key, value]) => {
+                    return (
+                        <Options 
+                            key={key}
+                            title={value.title}
+                            component={value.component}
+                            icon={value.icon}
+                            href={value.href}
+                            css={value.css}
+                            dropdown={value.dropdown}
+                            dropdownContent={value.dropdownContent}
+                        />
+                    )
+                })}
+            </div>
         </nav>
     )
 }
