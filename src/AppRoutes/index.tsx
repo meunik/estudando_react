@@ -42,10 +42,12 @@ export function AppRoutes() {
     return (
         <Router>
 		    <Navbar />
-            <Routes>
-                <Route key={'routes_home'} path="/" element={<Navigate to="/form" replace />} />
-                {routes(routesType)}
-            </Routes>
+            <div className="mx-8">
+                <Routes>
+                    <Route key={'routes_home'} path="/" element={<Navigate to="/form" replace />} />
+                    {routes(routesType)}
+                </Routes>
+            </div>
         </Router>
     )
 }
