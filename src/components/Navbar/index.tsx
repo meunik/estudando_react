@@ -9,8 +9,13 @@ export function Navbar() {
             style={{ background: `linear-gradient(25deg, #f4f8f9 13%, #004c77 25%)` }}
         >
             <Link to="/" className="focus-visible:outline-none">
-                <img
+                {/* <img
                     src="../src/assets/davita/logo-davita-azul.svg"
+                    alt="Logo da Davita"
+                    className="ml-5 w-20 h-full flex items-center"
+                /> */}
+                <img
+                    src="../src/assets/lightyear.svg"
                     alt="Logo da Davita"
                     className="ml-5 w-20 h-full flex items-center"
                 />

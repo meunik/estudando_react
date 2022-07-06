@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    @apply h-full;
+}
+
 body {
     /* @apply bg-[#09090A] text-zinc-100; */
     background: linear-gradient(to right, #f4f8f9 1%, #c8d8db 150%);
-    @apply text-zinc-700 text-sm;
+    @apply text-zinc-700 text-sm h-full;
 }
 
 ::-webkit-scrollbar {
@@ -21,6 +25,10 @@ body {
 
 .form {
     @apply text-sm placeholder-zinc-400 border-zinc-200 bg-white focus:border-davita-blue-1 focus:ring-davita-blue-1 focus:ring-[0.01rem] resize-none scrollbar scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin
+}
+
+.ckeckbox {
+    @apply appearance-none border-zinc-300 focus:border-davita-blue-1 focus:ring-davita-blue-1 focus:ring-[0.01rem] checked:bg-davita-blue-1 checked:hover:bg-davita-blue-1 checked:focus:bg-davita-blue-1
 }
 
 .seila {

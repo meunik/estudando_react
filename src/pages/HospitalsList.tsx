@@ -1,13 +1,45 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { CaretDown } from 'phosphor-react'
+import { useState } from 'react'
 
 export function HospitalsList() {
+    const [isChecked, setIsChecked] = useState(false);
+    const [hosp, setHosp] = useState(hospArr);
+
+    function handleCheck(keyValue: number) {
+        let hospChanged = hosp.map( (value, key) => {
+            if(key == keyValue) value.checked = !value.checked
+            return value
+        })
+        setHosp(hospChanged)
+    }
+
+    function setAllChecked() {
+        setIsChecked(!isChecked)
+        let hospChanged = hosp.map(value => {
+            value.checked = !isChecked
+            return value
+        })
+        setHosp(hospChanged)
+    }
+
     return (
         <Disclosure as="div" className="p-5 border-[0.01rem] border-zinc-200 bg-white">
             {({ open }) => (
                 <>
                     <div className="w-full flex items-center justify-between gap-2">
-                        <span className="font-semibold">HOSPITAIS [TODOS ]</span>
+                        <span className="font-semibold flex items-center gap-1">
+                            HOSPITAIS [
+                                <label htmlFor="todos">TODOS</label>
+                                <input
+                                    id="todos"
+                                    type="checkbox"
+                                    className="ckeckbox transition-all duration-200 ease-linear"
+                                    checked={isChecked}
+                                    onChange={setAllChecked}
+                                />
+                            ]
+                        </span>
                         <Disclosure.Button>
                             <div className="flex items-center gap-2">
                                 <span className='text-zinc-400'>{(open)?'OCULTAR':'EXIBIR'}</span>  
@@ -16,9 +48,21 @@ export function HospitalsList() {
                         </Disclosure.Button>
                     </div>
             
-                    <Disclosure.Panel className="grid md:grid-cols-4 sm:grid-cols-12 gap-4 my-5">
-                        {Object.entries(hosp).map(([key, value]) => {
-                            return (<p>{value}</p>)
+                    <Disclosure.Panel itemID='#hospitalList' className="grid md:grid-cols-4 sm:grid-cols-12 gap-4 my-5">
+                        {hosp.map((value, key) => {
+                            return (
+                                <li key={key} className='list-none flex items-center gap-2'>
+                                    <input
+                                        id={`hospital${key}`}
+                                        type="checkbox"
+                                        name='hospitais[]'
+                                        className="ckeckbox transition-all duration-200 ease-linear"
+                                        checked={value.checked}
+                                        onChange={() => handleCheck(key)}
+                                    />
+                                    <label htmlFor={`hospital${key}`}>{value.name}</label>
+                                </li>
+                            )
                         })}
                     </Disclosure.Panel>
                 </>
@@ -27,7 +71,16 @@ export function HospitalsList() {
     )
 }
 
-const hosp = [
+function hospArr() {
+    return hospList.map(value => {
+        return {
+            checked: false,
+            name: value
+        }
+    })
+}
+
+const hospList = [
     'DAVITA ADVANCE',
     'DAVITA AGUAS CLARAS',
     'DAVITA ANCHIETA',
@@ -125,5 +178,5 @@ const hosp = [
     'DAVITA VILA BASTOS',
     'DAVITA VILA IZABEL',
     'DAVITA VILA OLÍMPIA',
-    'DAVITA VITORIA'
+    'DAVITA VITORIA',
 ]
